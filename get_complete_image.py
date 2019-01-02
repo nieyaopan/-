@@ -5,6 +5,10 @@ from collections import Counter
 from PIL import Image
 from tqdm import tqdm
 
+'''
+获取完整的不带缺口的图片，主要是遍历每个分类的前三十张图片的各个位置像素，得到同一位置出现次数最多的像素，合成一张完整的图片
+'''
+
 start_time = time.time()
 image_dir_list = ["./image_228503604", "./image_514072197", "./image_1300223107", "./image_-2095274346"]
 for index, image_dir in enumerate(image_dir_list):
